@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "name": "PERRIN",
+      "prenom": "Mickael",
+      "email": "mick@example.com",
+      "password": "$2a$10$JrNd.QnqxkwPVMD.QEoITOiUrOM8z.tkq/zk5Jh7lvvF7BXqDgkxO",
+      "id": 1
+    },
+    {
+      "email": "jose@test.com",
+      "password": "$2a$10$JVH5BY3ptg2kSi1MvzwMYeVYPV3T4tK04gS/ew0B.3V8dnpomLDNO",
+      "name": "jose",
+      "prenom": "jose",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "name": "la semaine de 4heure"
+    },
+    {
+      "name": "L'achimiste"
+    }
+  ],
+  "taches": [
+    {
+      "titre": "test",
+      "usersId": 1,
+      "description": "je fais des testes",
+      "date_de_creation": "27/03/2019",
+      "date_fin": "29/03/2019",
+      "type": "urgent",
+      "id": 1
+    },
+    {
+      "titre": "test4",
+      "usersId": 2,
+      "description": "je fais des testes4",
+      "date_de_creation": "27/03/2019",
+      "date_fin": "29/03/2019",
+      "type": "urgent",
+      "id": 4
+    },
+    {
+      "titre": "sdfg",
+      "description": "sdfgh",
+      "date_fin": "30/03/2019",
+      "type": "A faire",
+      "date_de_creation": "28/03/2019",
+      "usersId": 1,
+      "id": 5
+    },
+    {
+      "titre": "dsfgh",
+      "description": "qsdfgh",
+      "date_fin": "31/03/2019",
+      "type": "Optionnel",
+      "date_de_creation": "29/03/2019",
+      "usersId": 1,
+      "id": 6
+    }
+  ]
+}

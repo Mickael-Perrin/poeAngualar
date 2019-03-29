@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <img src="https://mac-quest.com/mq-content/uploads/2019/01/nozbe-icon-300x300.png" alt="logo">
+  <div class="titre">
+    <h1>Bienvenu sur le Gestionnaire de tâches</h1>
+    <h2>Une Application qui va vous étonnez!! :)</h2>
+  </div>
+  <div *ngIf ="!connexionUser1()" class="button">
+      <p><a mat-stroked-button routerLink="/login">Se Connecter...</a></p>
+      <p><a mat-stroked-button routerLink="/inscription">S'inscrire...</a></p>
+  </div>
+  <div *ngIf ="connexionUser1()" class="button">
+  <p><button mat-stroked-button (click)="deconnexion()">Se Déconnecter...</button></p>
+  <p><a mat-stroked-button routerLink="/modification">Mon Compte</a></p>
+  </div>  
+</mat-toolbar>

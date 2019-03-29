@@ -1,0 +1,42 @@
+<app-barre-menu></app-barre-menu>
+
+<div class="center" >
+  <mat-card>
+    <mat-card-title >
+      Inscrivez vous en 30 secondes :
+    </mat-card-title>
+
+  
+    <form class="formulaire"  [formGroup]="form">
+      <mat-form-field>
+        <input matInput required type="text" 
+        formControlName="name" placeholder="Nom">
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput required type="text" 
+          formControlName="prenom" placeholder="Prénom">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput required type="email" 
+        formControlName="email" placeholder="Votre email">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput required type="password" 
+        formControlName="password" placeholder="Mot de passe">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput required type="password" 
+        formControlName="passwordControl" placeholder="Vérification mot de passe">
+      </mat-form-field>
+      
+
+      <button mat-raised-button color="primary"
+      (click)="inscription()">S'inscrire</button>
+
+    </form>
+  </mat-card>
+</div>

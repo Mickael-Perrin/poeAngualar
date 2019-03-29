@@ -1,0 +1,42 @@
+<app-barre-menu></app-barre-menu>
+
+<mat-card>
+    <mat-card-title >
+      Entrer votre tache
+    </mat-card-title>
+
+  
+    <form class="formulaire"  [formGroup]="form">
+      <mat-form-field>
+        <input matInput required type="text" 
+        formControlName="titre" placeholder="Votre titre">
+      </mat-form-field>
+
+      <mat-form-field>
+          <textarea matInput  required rows="5" cols="3"
+          formControlName="description" placeholder="Description précise de la tâche">
+          </textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput (dateChange)="toto($event)" [matDatepicker]="picker" 
+          placeholder="Date d'échéance" formControlName="date_fin">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+
+      <mat-form-field>
+          <mat-label for="Categorie">Catégorie:</mat-label>
+          <mat-select required id="Categorie" formControlName="type">
+              <mat-option value="Urgent">Urgent</mat-option>
+              <mat-option value="A faire">A faire</mat-option>
+              <mat-option value="Optionnel">Optionnel</mat-option>
+          </mat-select>   
+      </mat-form-field> 
+
+      <button mat-raised-button color="primary"
+      (click)="ajouter()">Ajouter</button>
+
+    </form>
+  </mat-card>

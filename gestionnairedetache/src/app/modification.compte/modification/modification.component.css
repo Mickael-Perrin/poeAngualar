@@ -1,0 +1,64 @@
+.contenaire{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:3%;
+    padding-top:1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: rgb(116, 116, 243);
+    width: 35%;
+    border: solid 3px rgb(43, 112, 190);
+    box-shadow: 25px 36px 15px rgba(0,0,0,0.3);
+    border-radius:20%;
+    
+    
+}
+.infos{
+    font-style: italic;
+    color: white;
+    margin-bottom: 10%;
+    text-align: center;
+    
+}
+.title{
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+p{
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1%;
+}
+span{
+    display : block;
+    text-align: center;
+}
+button{
+    display: block;
+    margin : auto;
+    margin-top: 10%;
+}
+
+label{
+    display: block;
+    margin:auto;
+    text-align: center;
+    text-decoration: underline;
+}
+input{
+    display: block;
+    margin:auto;
+    text-align: center;
+}
+h2{
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+<app-barre-menu></app-barre-menu>
+
+
+<a class="ajouter" mat-stroked-button routerLink="/ajoute_tache"> + Ajout de tache</a>
+
+
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<table *ngIf="listTaches" mat-table [dataSource]="listTaches"  class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="titre">
+          <th mat-header-cell *matHeaderCellDef> Titre </th>
+          <td mat-cell *matCellDef="let tache"> {{tache.titre}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="date_fin">
+          <th mat-header-cell *matHeaderCellDef> Date de Fin </th>
+          <td mat-cell *matCellDef="let tache"> {{tache.date_fin}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> categorie </th>
+          <td mat-cell *matCellDef="let tache"> {{tache.type | uppercase}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Detail">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let tache"> 
+              <button mat-raised-button color="primary"
+              (click)="detail(tache.id)">Détails</button>  
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Supprimer">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let tache" > 
+            <img (click)="envoi(tache.id)" src="https://publicdomainvectors.org/photos/Anonymous_Architetto_--_Cestino_pieno.png">
+          </td>
+        </ng-container>
+
+        
+            
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+  
+

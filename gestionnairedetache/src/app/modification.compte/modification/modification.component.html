@@ -1,0 +1,43 @@
+<app-barre-menu></app-barre-menu>
+
+
+<div *ngIf="!affichageFormulaire" class="contenaire">
+  <p class="title">Voici les renseignements que l'on a sur vous :</p>
+  <p class="infos">(Pour voir vos informations passez sur le bloc)</p>
+  <div>
+    <p>Votre Prénom:</p>
+    <span>{{userCourant.prenom|uppercase}}</span>
+    <p>Votre Nom:</p>
+    <span>{{userCourant.name|uppercase}}</span>
+    <p>Votre Email:</p>
+    <span>{{userCourant.email}}</span>
+    <button mat-raised-button color="primary"
+      (click)="formModifier()">Modifier</button>
+  </div>
+</div>
+
+  
+    <form *ngIf="affichageFormulaire" class="contenaire"  [formGroup]="form">
+      <h2>Marquez vos changements</h2>
+      <label name="prenom">Votre Prénom:</label> <br>
+      <input type="text" formControlName="prenom"><br>
+
+      <label name="nom">Votre Nom:</label><br>
+      <input type="text" formControlName="name"><br>
+
+      <label name="email">Votre Email:</label><br>
+      <input type="email" formControlName="email"><br>
+    
+      <button mat-raised-button color="primary"
+        (click)="envoiModification()">Modifier</button>
+    </form>
+  
+
+  
+
+ 
+
+
+
+
+

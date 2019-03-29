@@ -1,0 +1,12 @@
+
+<app-barre-menu></app-barre-menu>
+
+<div *ngIf="tacheCourante">
+  <p>Titre de la tâche: </p><span>{{tacheCourante.titre}}</span>
+  <p>Description: </p><span>{{tacheCourante.description}}</span>
+  <p>Date de création: </p><span>{{tacheCourante.date_de_creation}}</span>
+  <p>Date de fin: </p><span>{{tacheCourante.date_fin}}</span>
+  <p>Catégorie: </p><span>{{tacheCourante.type}}</span>
+  <a class="retour" mat-stroked-button routerLink="/home"> Retour</a>
+  
+</div>

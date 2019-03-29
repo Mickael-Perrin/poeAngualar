@@ -1,0 +1,15 @@
+{
+  "name": "json-server1",
+  "version": "1.0.0",
+  "description": "\"test\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server db.json -m ./node_modules/json-server-auth -r routes.json"
+  },
+  "author": "micka",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.14.2",
+    "json-server-auth": "^1.1.0"
+  }
+}

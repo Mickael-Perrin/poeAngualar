@@ -1,0 +1,30 @@
+.center{
+    margin-top:2%;
+    margin-bottom:2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    }
+    
+mat-card-title{
+        text-align: center;
+        margin-bottom: 10% ;
+        text-decoration: underline;
+        
+    }
+    
+.formulaire{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        height:500px;
+    }
+
+mat-card{
+    background-color:rgb(116, 116, 243);
+    height: 600px;
+}
+mat-form-field{
+    width: 70%;
+}
